@@ -1,0 +1,40 @@
+<!-- <ion-header>
+  <ion-toolbar color="danger">
+    <ion-back-button color="light"></ion-back-button>
+    <ion-title>Gestion Utilisateur</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item class="vertical-space">
+      <h1 class="center">Créer un compte</h1>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input type="email" placeholder="Entrez votre email" [(ngModel)]="email" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" placeholder="Entrez votre Password" [(ngModel)]="password" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Nom</ion-label>
+      <ion-input type="email" placeholder="Entrez votre nom" [(ngModel)]="nom" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Prenom</ion-label>
+      <ion-input type="email" placeholder="Entrez votre prenom" [(ngModel)]="prenom" ></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" color="danger" shape="round" (click)="signup()">Create Account</ion-button>
+
+  <ion-button expand="block" fill="clear" color="danger" (click)="goToLogin()" >Already Have an Account? Login Here</ion-button>
+
+</ion-content>
+

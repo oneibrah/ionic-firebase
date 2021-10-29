@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Accueil</ion-title>
+    <ion-buttons slot="starts">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+      Bienvenue !
+
+        <p> <strong>{{ userDetail }}</strong></p>
+      </ion-col>
+    </ion-row>
+
+    
+  </ion-grid>
+  <ion-item *ngFor= "let item of items | async">
+    <ion-label> {{item.name}}  {{item.prenom}}</ion-label>
+    
+  </ion-item>
+  <ion-button type="submit" color="danger" expand="block" (click)="signOut()">Deconnexion</ion-button>
+</ion-content>
